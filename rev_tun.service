@@ -1,0 +1,13 @@
+[Unit]
+Description=moto reverse ssh tunnel
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/rev-tun/rev-tun.sh
+Restart=always
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target
